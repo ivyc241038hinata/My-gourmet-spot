@@ -1,0 +1,15 @@
+[
+  {
+    "id": 1,
+    "shop_name": "ラーメン 味よし",
+    "address": "大分県大分市荷揚町4-1",
+    "phone_number": "097-512-34XX",
+    "sns_type": "X",
+    "sns_url": "@ajiyoshi_ramen",
+    "logo_image_path": "",
+    "keywords": "休み,臨時,定休,完売",
+    "latest_sns_text": "本日11:30より元気に営業開始します！皆様のご来店お待ちしております。",
+    "latest_sns_time": "2026-06-29T11:00:00",
+    "business_status": "営業中"
+  }
+]
