@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center_horizontal">
+
+    <TextView
+        android:id="@+id/textRegisterTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="40dp"
+        android:text="新規アカウント登録"
+        android:textSize="28sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editNewUserId"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="新しいユーザーID"
+        android:inputType="text"
+        android:layout_marginBottom="16dp" />
+
+    <EditText
+        android:id="@+id/editNewPassword"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="新しいパスワード"
+        android:inputType="textPassword"
+        android:layout_marginBottom="24dp" />
+
+    <Button
+        android:id="@+id/buttonRegister"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:text="アカウントを作成"
+        android:backgroundTint="#6750A4"
+        android:layout_marginBottom="20dp" />
+
+    <TextView
+        android:id="@+id/textToLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="すでにアカウントをお持ちの方はこちら"
+        android:textColor="#6750A4"
+        android:textSize="14sp" />
+</LinearLayout>

@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:id="@+id/textClose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="✕"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#333333"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="絞り込み・並べ替え"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#333333"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#DDDDDD"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="並べ替え"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:layout_marginBottom="12dp"/>
+
+        <RadioGroup
+            android:id="@+id/radioGroupSort"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="24dp">
+
+            <RadioButton
+                android:id="@+id/radioSortRating"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="A✓ 全体評価の高い順"
+                android:textSize="15sp"
+                android:background="@android:color/transparent"
+                android:buttonTint="#7952B3"
+                android:checked="true"/>
+
+            <RadioButton
+                android:id="@+id/radioSortNewest"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="⏱ 登録の新しい順"
+                android:textSize="15sp"
+                android:buttonTint="#7952B3"/>
+
+            <RadioButton
+                android:id="@+id/radioSortUpdated"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="📅 更新日時順"
+                android:textSize="15sp"
+                android:buttonTint="#7952B3"/>
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ジャンルで絞り込み"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:layout_marginBottom="12dp"/>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:alignmentMode="alignBounds"
+            android:layout_marginBottom="24dp">
+
+            <CheckBox
+                android:id="@+id/checkGenreAll"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="すべて"
+                android:checked="true"
+                android:buttonTint="#7952B3"/>
+
+            <CheckBox
+                android:id="@+id/checkGenreCafe"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="カフェ"
+                android:buttonTint="#7952B3"/>
+
+            <CheckBox
+                android:id="@+id/checkGenreRamen"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="ラーメン"
+                android:buttonTint="#7952B3"/>
+
+            <CheckBox
+                android:id="@+id/checkGenreIzakaya"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="居酒屋"
+                android:buttonTint="#7952B3"/>
+
+            <CheckBox
+                android:id="@+id/checkGenreSuper"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="スーパー"
+                android:buttonTint="#7952B3"/>
+
+            <CheckBox
+                android:id="@+id/checkGenreOther"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="その他"
+                android:buttonTint="#7952B3"/>
+        </GridLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="評価絞り込み"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:layout_marginBottom="12dp"/>
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroupRating"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:singleSelection="false"
+            android:layout_marginBottom="32dp">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipStar5"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="★5"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipStar4"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="★4"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipStar3"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="★3"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipStar2"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="★2"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipStar1"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="★1"/>
+        </com.google.android.material.chip.ChipGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <Button
+                android:id="@+id/buttonReset"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:text="リセット"
+                android:textColor="#666666"
+                android:textSize="16sp"/>
+
+            <Button
+                android:id="@+id/buttonApply"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:text="適用"
+                android:textSize="16sp"
+                android:backgroundTint="#6c5ce7"
+                android:textColor="#FFFFFF"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

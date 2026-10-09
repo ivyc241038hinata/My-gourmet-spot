@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="8dp"
+    android:layout_marginVertical="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="6dp"
+    app:cardMaxElevation="8dp"
+    app:cardUseCompatPadding="true"
+    app:cardBackgroundColor="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- 上段：店名と評価エリア -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp">
+
+            <!-- 店名 -->
+            <TextView
+                android:id="@+id/textListName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@id/layoutRating"
+                android:text="店名"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:ellipsize="end"
+                android:maxLines="1" />
+
+            <!-- 右側の評価（全体評価テキスト＋星評価） -->
+            <LinearLayout
+                android:id="@+id/layoutRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:orientation="vertical"
+                android:gravity="end">
+
+                <TextView
+                    android:id="@+id/textListRatingNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="全体評価 4"
+                    android:textSize="12sp"
+                    android:textColor="#555555" />
+
+                <RatingBar
+                    android:id="@+id/listRatingBar"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:isIndicator="true"
+                    android:numStars="5"
+                    android:stepSize="1.0"
+                    android:progressTint="#FFC107" />
+            </LinearLayout>
+
+            <!-- カテゴリ（ジャンル） -->
+            <TextView
+                android:id="@+id/textListCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textListName"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="4dp"
+                android:text="ジャンル"
+                android:textSize="13sp"
+                android:textColor="#666666" />
+        </RelativeLayout>
+
+        <!-- 画像表示エリア -->
+        <ImageView
+            android:id="@+id/imageListPhoto"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="12dp"
+            android:scaleType="centerCrop"
+            android:clipToOutline="true"
+            android:background="@drawable/rounded_image_background"
+            tools:src="@tools:sample/backgrounds/scenic" />
+
+        <!-- メモ表示エリア -->
+        <TextView
+            android:id="@+id/textListMemo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📝 メモ"
+            android:textSize="14sp"
+            android:textColor="#333333"
+            android:lineSpacingExtra="2dp" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
